@@ -1,1 +1,4 @@
 mykeys.py
+.idea/
+__pycache__/
+sample_tweets/
