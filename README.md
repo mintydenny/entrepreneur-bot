@@ -7,7 +7,7 @@ Corpus of tweets with specific hashtags ("#entrepreneurlife", "#entrepreneur", "
 * The chain is constructed by using the current word as the key
 * Each state is determined by a key consisting of the prior token (words).
 
-## Improvements
+## Improvements & ToDo
 1. Better dataset: The tweets collected may have been too varied and sometimes creates incoherent sentences
 2. Better sentence completion, sentences feel like they're ending too early and feels cut off mid tweet.
 3. Correct implementation of second order markov chain
