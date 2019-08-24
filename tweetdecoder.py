@@ -97,7 +97,7 @@ def generate_tweet1st(chain):
     return tweet
 
 sentencesFile = open("./pickle/entrepreneurlife.pickle","rb")
-sentencesFile2 = open("./pickle/entreprenuer.pickle","rb")
+sentencesFile2 = open("./pickle/entrepreneur.pickle","rb")
 sentencesFile3 = open("./pickle/mindset.pickle","rb")
 sentencesFile4 = open("./pickle/success.pickle","rb")
 sentencesFile5 = open("./pickle/entrepreneurship.pickle","rb")
@@ -110,16 +110,16 @@ tweetList_sum = tweetList + tweetList2 + tweetList3 + tweetList4 + tweetList5
 print(len(tweetList_sum))
 
 for tweet in tweetList_sum:
-    add2chain2nd(tweet)
-print(generate_tweet2nd(chain))
+    add2chain1st(tweet)
+print(generate_tweet1st(chain))
 print("======================")
-print(generate_tweet2nd(chain))
+print(generate_tweet1st(chain))
 print("======================")
-print(generate_tweet2nd(chain))
+print(generate_tweet1st(chain))
 print("======================")
-print(generate_tweet2nd(chain))
+print(generate_tweet1st(chain))
 print("======================")
-print(generate_tweet2nd(chain))
+print(generate_tweet1st(chain))
 #
 
 
