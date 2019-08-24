@@ -3,16 +3,6 @@ import re
 import numpy as np
 import random
 import pickle
-def decode_tweet_csv(csv_file_name):
-    with open(csv_file_name,encoding="utf-8") as csvfile:
-        csvreader = csv.reader(csvfile)
-        for row in csvreader:
-            if len(row) != 0:
-                # row = [entry.decode("utf8") for entry in row]
-                text = row[0][2:-1]
-                text = re.sub('(?<!https://t)\.[\d|\w|\#]',r" ",text)
-                splitted_text = [i for i in text.split(" ") if (i and i != ".")]
-                add2chain2nd(splitted_text)
 chain = {}
 count = {}
 startKey = "__START__" # Start symbol
@@ -106,11 +96,11 @@ def generate_tweet1st(chain):
         firstWord = newWord
     return tweet
 
-sentencesFile = open("./tweet1.pickle","rb")
-sentencesFile2 = open("./tweet3.pickle","rb")
-sentencesFile3 = open("./mindset.pickle","rb")
-sentencesFile4 = open("./success.pickle","rb")
-sentencesFile5 = open("./entrepreneurship.pickle","rb")
+sentencesFile = open("./pickle/entrepreneurlife.pickle","rb")
+sentencesFile2 = open("./pickle/entreprenuer.pickle","rb")
+sentencesFile3 = open("./pickle/mindset.pickle","rb")
+sentencesFile4 = open("./pickle/success.pickle","rb")
+sentencesFile5 = open("./pickle/entrepreneurship.pickle","rb")
 tweetList = pickle.load(sentencesFile)
 tweetList2 = pickle.load(sentencesFile2)
 tweetList3 = pickle.load(sentencesFile3)
@@ -119,7 +109,6 @@ tweetList5 = pickle.load(sentencesFile5)
 tweetList_sum = tweetList + tweetList2 + tweetList3 + tweetList4 + tweetList5
 print(len(tweetList_sum))
 
-# tweetList.append(tweetList2)
 for tweet in tweetList_sum:
     add2chain2nd(tweet)
 print(generate_tweet2nd(chain))
@@ -132,7 +121,5 @@ print(generate_tweet2nd(chain))
 print("======================")
 print(generate_tweet2nd(chain))
 #
-# decode_tweet_csv("./sample_tweets/tweets4.csv")
-# generate_tweet1st(chain)
 
 
