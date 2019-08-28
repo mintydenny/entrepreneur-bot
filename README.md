@@ -22,5 +22,3 @@ Some of my favorite quotes
 3. Correct implementation of second order markov chain
 
 ---
-Sidenote:
-I had what I thought was a second order markov chain implemented in which I dictated that the future state (our next word) is determined by using the previous two words as key. However, this seemed to not be the case. But upon further reading, this seemed to not be the case. Each key should be a unique word, for both first and second order.  
